@@ -1,0 +1,542 @@
+
+/* =====================================
+   1. CONFIGURAÇÕES GERAIS
+===================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --azul-escuro: #123451;
+    --azul-principal: #176b87;
+    --azul-claro: #eaf5f9;
+    --fundo: #f3f6fa;
+    --texto: #263746;
+    --branco: #ffffff;
+    --borda: #dce6ed;
+    --sombra: 0 4px 16px rgba(18, 52, 81, 0.08);
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--fundo);
+    color: var(--texto);
+    line-height: 1.7;
+}
+
+a {
+    color: var(--azul-principal);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+    outline: 3px solid #f0b429;
+    outline-offset: 3px;
+}
+
+/* =====================================
+   2. CABEÇALHO
+===================================== */
+
+.cabecalho {
+    background: linear-gradient(135deg, #123451, #197f9b);
+    color: var(--branco);
+    padding: 48px 20px;
+    text-align: center;
+}
+
+.cabecalho-conteudo {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.identificacao {
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+    opacity: 0.9;
+}
+
+.cabecalho h1 {
+    font-size: clamp(28px, 4vw, 42px);
+    line-height: 1.25;
+    margin-bottom: 14px;
+}
+
+.subtitulo {
+    font-size: 17px;
+    opacity: 0.95;
+}
+
+/* =====================================
+   3. MENU PRINCIPAL
+===================================== */
+
+.menu {
+    background-color: var(--azul-escuro);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 12px 18px;
+}
+
+.menu a {
+    color: var(--branco);
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    font-size: 15px;
+    transition: background-color 0.2s;
+}
+
+.menu a:hover {
+    background-color: var(--azul-principal);
+}
+
+/* =====================================
+   4. ESTRUTURA DA PÁGINA
+===================================== */
+
+.layout {
+    max-width: 1300px;
+    margin: 32px auto;
+    padding: 0 22px;
+    display: grid;
+    grid-template-columns: 245px minmax(0, 1fr);
+    gap: 26px;
+    align-items: start;
+}
+
+/* =====================================
+   5. BARRA LATERAL
+===================================== */
+
+.barra-lateral {
+    background-color: var(--branco);
+    padding: 22px;
+    border: 1px solid var(--borda);
+    border-radius: 12px;
+    box-shadow: var(--sombra);
+    position: sticky;
+    top: 18px;
+}
+
+.barra-lateral h2 {
+    color: var(--azul-escuro);
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.barra-lateral a {
+    display: block;
+    padding: 9px 0;
+    border-bottom: 1px solid #edf1f4;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.barra-lateral a:last-child {
+    border-bottom: none;
+}
+
+.barra-lateral a:hover {
+    color: #0c4057;
+    text-decoration: underline;
+}
+
+/* =====================================
+   6. CARTÕES DE CONTEÚDO
+===================================== */
+
+main {
+    min-width: 0;
+}
+
+.cartao {
+    background-color: var(--branco);
+    padding: 30px;
+    margin-bottom: 24px;
+    border: 1px solid var(--borda);
+    border-radius: 12px;
+    box-shadow: var(--sombra);
+    scroll-margin-top: 20px;
+}
+
+.cartao h2 {
+    color: var(--azul-escuro);
+    font-size: 25px;
+    line-height: 1.35;
+    padding-bottom: 12px;
+    margin-bottom: 18px;
+    border-bottom: 2px solid #d9eaf0;
+}
+
+.cartao h3 {
+    color: var(--azul-principal);
+    font-size: 19px;
+    margin: 22px 0 8px;
+    scroll-margin-top: 20px;
+}
+
+.cartao p {
+    margin-bottom: 14px;
+}
+
+.cartao ul {
+    padding-left: 24px;
+    margin: 10px 0 18px;
+}
+
+.etiqueta {
+    display: inline-block;
+    color: var(--azul-principal);
+    background-color: var(--azul-claro);
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 0.8px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-bottom: 12px;
+}
+
+/* =====================================
+   7. FÓRMULA
+===================================== */
+
+.formula {
+    background-color: var(--azul-claro);
+    color: var(--azul-escuro);
+    padding: 20px;
+    margin: 18px 0;
+    border-left: 5px solid var(--azul-principal);
+    border-radius: 6px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    overflow-wrap: anywhere;
+}
+
+/* =====================================
+   8. GALERIA DE IMAGENS
+===================================== */
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+    align-items: start;
+    margin-top: 22px;
+}
+
+.imagem-educativa {
+    min-width: 0;
+    padding: 15px;
+    background-color: #fbfcfd;
+    border: 1px solid var(--borda);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.imagem-educativa img {
+    display: block;
+    width: 100%;
+    height: 240px;
+    object-fit: contain;
+    margin: 0 auto 14px;
+    border-radius: 6px;
+    background-color: var(--branco);
+}
+
+.imagem-educativa figcaption {
+    font-size: 13px;
+    line-height: 1.6;
+    color: #526575;
+}
+
+.imagem-educativa figcaption strong,
+.imagem-educativa figcaption span {
+    display: block;
+}
+
+.imagem-educativa figcaption strong {
+    color: var(--azul-escuro);
+    margin-bottom: 6px;
+}
+
+/* =====================================
+   9. APLICAÇÕES PRÁTICAS
+===================================== */
+
+.lista-aplicacoes {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    margin-top: 20px;
+}
+
+.item-aplicacao {
+    background-color: #f8fbfd;
+    border: 1px solid var(--borda);
+    border-left: 4px solid var(--azul-principal);
+    border-radius: 8px;
+    padding: 18px;
+}
+
+.item-aplicacao h3 {
+    margin-top: 0;
+    font-size: 17px;
+}
+
+.item-aplicacao p {
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+/* =====================================
+   10. CURIOSIDADES E RESUMO
+===================================== */
+
+.lista-curiosidades li {
+    margin-bottom: 10px;
+}
+
+.resumo {
+    border-top: 5px solid var(--azul-principal);
+}
+
+.resumo p {
+    font-size: 16px;
+}
+
+/* =====================================
+   11. QUIZ
+===================================== */
+
+.pergunta {
+    min-width: 0;
+    border: 1px solid var(--borda);
+    border-radius: 9px;
+    padding: 18px;
+    margin: 20px 0;
+}
+
+.pergunta legend {
+    max-width: 100%;
+    padding: 0 7px;
+    color: var(--azul-escuro);
+    font-weight: bold;
+}
+
+.pergunta label {
+    display: block;
+    padding: 9px 10px;
+    margin-top: 5px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.pergunta label:hover {
+    background-color: var(--azul-claro);
+}
+
+.pergunta input {
+    margin-right: 8px;
+    accent-color: var(--azul-principal);
+}
+
+button {
+    font-family: inherit;
+    font-size: 15px;
+    cursor: pointer;
+    border: none;
+    border-radius: 7px;
+    padding: 12px 18px;
+    margin: 5px 8px 5px 0;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+button:hover {
+    transform: translateY(-1px);
+}
+
+.botao-principal {
+    background-color: var(--azul-principal);
+    color: var(--branco);
+}
+
+.botao-principal:hover {
+    background-color: var(--azul-escuro);
+}
+
+.botao-secundario {
+    background-color: #e6edf2;
+    color: var(--azul-escuro);
+}
+
+.botao-secundario:hover {
+    background-color: #d4e0e8;
+}
+
+.resultado-quiz {
+    margin-top: 20px;
+    padding: 16px;
+    border-radius: 8px;
+    display: none;
+}
+
+.resultado-quiz.visivel {
+    display: block;
+}
+
+.resultado-quiz.sucesso {
+    background-color: #e8f6ed;
+    color: #205c35;
+    border: 1px solid #b8e0c4;
+}
+
+.resultado-quiz.atencao {
+    background-color: #fff5df;
+    color: #785316;
+    border: 1px solid #f0d79c;
+}
+
+/* =====================================
+   12. REFERÊNCIAS
+===================================== */
+
+.referencias li {
+    margin-bottom: 12px;
+    overflow-wrap: anywhere;
+}
+
+.referencias a {
+    text-decoration: none;
+}
+
+.referencias a:hover {
+    text-decoration: underline;
+}
+
+.aviso-referencias {
+    padding: 14px;
+    border-radius: 7px;
+    background-color: #f4f7f9;
+    font-size: 13px;
+    color: #526575;
+}
+
+/* =====================================
+   13. RODAPÉ
+===================================== */
+
+.rodape {
+    background-color: var(--azul-escuro);
+    color: var(--branco);
+    padding: 28px 18px;
+    text-align: center;
+    margin-top: 35px;
+}
+
+.rodape p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+/* =====================================
+   14. TABLETS E CELULARES
+===================================== */
+
+@media (max-width: 900px) {
+    .layout {
+        grid-template-columns: 210px minmax(0, 1fr);
+        gap: 18px;
+        padding: 0 15px;
+    }
+
+    .cartao {
+        padding: 22px;
+    }
+
+    .galeria {
+        grid-template-columns: 1fr;
+    }
+
+    .imagem-educativa img {
+        height: 260px;
+    }
+}
+
+@media (max-width: 650px) {
+    .cabecalho {
+        padding: 35px 16px;
+    }
+
+    .identificacao {
+        font-size: 11px;
+        letter-spacing: 1px;
+    }
+
+    .subtitulo {
+        font-size: 15px;
+    }
+
+    .menu {
+        gap: 4px;
+        padding: 10px;
+    }
+
+    .menu a {
+        padding: 8px 10px;
+        font-size: 13px;
+    }
+
+    .layout {
+        display: flex;
+        flex-direction: column;
+        margin: 18px auto;
+        padding: 0 12px;
+    }
+
+    .barra-lateral {
+        width: 100%;
+        position: static;
+    }
+
+    main {
+        width: 100%;
+    }
+
+    .cartao {
+        padding: 19px;
+        margin-bottom: 17px;
+    }
+
+    .cartao h2 {
+        font-size: 22px;
+    }
+
+    .lista-aplicacoes {
+        grid-template-columns: 1fr;
+    }
+
+    .imagem-educativa img {
+        height: 220px;
+    }
+
+    .formula {
+        font-size: 21px;
+    }
+
+    button {
+        max-width: 100%;
+    }
+}
