@@ -152,6 +152,54 @@ input:focus-visible {
     text-decoration: underline;
 }
 
+
+/* Estilos do menu com os conteúdos da turma */
+.aviso-menu {
+    font-size: 12px;
+    color: #526575;
+    margin-bottom: 18px;
+}
+
+.grupo-menu {
+    margin-top: 18px;
+    padding-top: 12px;
+    border-top: 1px solid var(--borda);
+}
+
+.grupo-menu h3 {
+    color: var(--azul-escuro);
+    font-size: 14px;
+    line-height: 1.4;
+    margin-bottom: 8px;
+}
+
+.barra-lateral a.topico-indisponivel {
+    color: #657786;
+    font-size: 12px;
+    line-height: 1.5;
+    padding: 8px;
+    cursor: default;
+    overflow-wrap: anywhere;
+}
+
+.barra-lateral a.topico-atual {
+    background-color: var(--azul-claro);
+    color: var(--azul-escuro);
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 1.5;
+    padding: 9px;
+    border-left: 4px solid var(--azul-principal);
+    border-radius: 5px;
+    overflow-wrap: anywhere;
+}
+
+.barra-lateral a.topico-atual:hover {
+    text-decoration: none;
+    color: var(--azul-escuro);
+}
+
+
 /* =====================================
    6. CARTÕES DE CONTEÚDO
 ===================================== */
